@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import ApiPexels from './services/ApiPexels';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Pagination from 'react-bootstrap/Pagination';
-import $ from 'jquery';
 import Header from './components/Header';
+import Select from './components/Select';
+import Search from './components/Search';
+import Pagination from './components/Pagination'
 import Footer from './components/Footer';
-
 
 export default function App() {
 
@@ -41,13 +40,10 @@ export default function App() {
         }
 
         setPages(arrayPages);
-
       }
 
       loadPhotos();
-    }
-
-    else {
+    } else {
 
       async function searchPhotos() {
 
@@ -82,7 +78,6 @@ export default function App() {
 
           setPages(arrayPages);
         }
-
       }
 
       searchPhotos();
@@ -90,36 +85,14 @@ export default function App() {
 
   }, [currentPage, limit, query, total]);
 
-  const limits = useCallback((e) => {
-    setLimit(e.target.value);
-    setCurrentPage(1);
-  }, []);
-
-  const InputSearch = useCallback((e) => {
-    setSearchPhotos(e.target.value);
-    setCurrentPage(1);
-  }, []);
-
   return (
     <div className="App">
       <Header />
 
       <Container>
         <Row>
-          <Col sm={8}>
-            <Form.Group>
-              <Form.Label><h5>Quantidade de fotos por página:</h5></Form.Label>
-              <Form.Select onChange={limits} >
-                <option value="6">6</option>
-                <option value="30">30</option>
-                <option value="60">60</option>
-              </Form.Select>
-            </Form.Group>
-          </Col>
-
-          <Col sm={4}>
-            <Form.Control type="text" onChange={InputSearch} placeholder="Buscar..." />
-          </Col>
+          <Select setLimit={setLimit} setCurrentPage={setCurrentPage} />
+          <Search setSearchPhotos={setSearchPhotos} setCurrentPage={setCurrentPage} />
         </Row>
 
         <Row>
@@ -130,21 +103,7 @@ export default function App() {
           ))}
         </Row>
 
-        <Row>
-          <Pagination className="justify-content-md-center">
-            {currentPage > 1 && (
-              <Pagination.Item onClick={() => { setCurrentPage(currentPage - 1); $(window).scrollTop(0); }}> Anterior </Pagination.Item>
-            )}
-
-            {pages.map((page) => (
-              <Pagination.Item active={page === currentPage} key={page} onClick={() => { setCurrentPage(page); $(window).scrollTop(0); }}> {page} </Pagination.Item>
-            ))}
-
-            {currentPage < pages.length && (
-              <Pagination.Item onClick={() => { setCurrentPage(currentPage + 1); $(window).scrollTop(0); }}> Proxima </Pagination.Item>
-            )}
-          </Pagination>
-        </Row>
+        <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </Container>
 
       <Footer />
