@@ -17,7 +17,7 @@ export default function App() {
       <Header />
 
       <Container>
-        <Row>
+        <Row className='border-bottom border-dark pb-2'>
           <Select />
           <Search />
         </Row>

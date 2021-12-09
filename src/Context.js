@@ -87,21 +87,7 @@ export const AlbumContextProvider = (props) => {
   }, []);
 
   return (
-    <AlbumContext.Provider
-      value={{
-        photos,
-        setPhotos,
-        limit,
-        setLimit,
-        pages,
-        setPages,
-        currentPage,
-        setCurrentPage,
-        limits,
-        InputSearch,
-        setSearchPhotos
-      }}
-    >
+    <AlbumContext.Provider value={{ photos, pages, currentPage, setCurrentPage, limits, InputSearch }}>
       {props.children}
     </AlbumContext.Provider>
   );

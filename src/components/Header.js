@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
 
-        <header className="App-header border border-dark">
+        <header className="App-header">
             <h1 className="App-header-title">Àlbum de fotos</h1>
         </header>
     )

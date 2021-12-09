@@ -12,7 +12,7 @@ const Paginations = () => {
 
   return (
 
-    <Row>
+    <Row className='border-top border-dark pt-3 mb-5'>
       <Pagination className="justify-content-md-center">
         {currentPage > 1 && (
           <Pagination.Item onClick={() => { setCurrentPage(currentPage - 1); $(window).scrollTop(0); }}> Anterior </Pagination.Item>

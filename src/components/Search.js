@@ -12,7 +12,9 @@ const Search = () => {
     return (
 
         <Col sm={4}>
-            <Form.Control title="Busca" type="text" onChange={InputSearch} placeholder="Buscar..." />
+            <Form.Label>
+                <Form.Control title="Busca" type="text" onChange={InputSearch} placeholder="Buscar Fotos..." />
+            </Form.Label>
         </Col>
     )
 }
