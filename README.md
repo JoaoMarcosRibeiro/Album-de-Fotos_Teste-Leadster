@@ -21,22 +21,23 @@ O objetivo do teste é avaliar a capacidade de resolver problemas e também a qu
 
 ## Informações do Projeto
 
-- O projeto foi desenvolvido com ReactJS, API Pexels importado com codigo Javascript, conforme documentação da API;
+- O projeto foi desenvolvido com ReactJS, API Pexels importado com codigo Javascript, conforme [documentação](https://www.pexels.com/api/documentation/#photos) da API;
 - Feito a captura e manipulação dos dados através da logica do ReactsJS e linguagem Javascript;
-- Criado um cabeçalho e um rodapé, conforme solicitado solicidado;
+- Criado um cabeçalho e um rodapé, conforme solicidado;
 - Feito logica para a renderização dos resutados de forma organizada para deixar o projeto apresentavel;
 - Renderização padrão das fotos em tempo real com curadoria da equipe Pexels;
 - Campo para pré selecionar a quantidade de fotos por pagina;
 - Campo de busca que carrega fotos conforme a digitação do conteudo buscado por usuário;
 - Fotos são ampliadas com cursor do mouse;
 - Paginação renderizada conforme quantidade de fotos e estabelecido uma quantidade total de paginas;
-- Quando a pagina é selecionada o site volta ao topo da pagina para redenrização das fotos; 
+- Quando a pagina é selecionada o site volta ao topo da pagina para redenrização das fotos;
+- Compartilhamento de dados do site entre componentes com Context 
 
 Tecnologias utilizadas:
 
-- React JS;
-- API Pexels;
-- SASS (Pré Processador de CSS);
-- Bootstrap
-- React-bootstrap
-- Jquery
+- [React JS](https://reactjs.org/);
+- [API Pexels](https://www.pexels.com/api/);
+- [SASS](https://sass-lang.com/) (Pré Processador de CSS);
+- [Bootstrap](https://getbootstrap.com/)
+- [React-bootstrap](https://react-bootstrap.github.io/)
+- [Jquery](https://jquery.com/)

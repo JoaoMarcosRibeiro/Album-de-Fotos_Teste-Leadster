@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
 
-        <footer className="App-footer border border-dark mt-5"> João Marcos Ribeiro - 12/2021 </footer>
+        <footer className="App-footer border border-dark mt-5"> João Marcos Ribeiro © 2021 </footer>
     )
 }
 

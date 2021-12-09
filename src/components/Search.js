@@ -1,20 +1,18 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import '../App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import { useAlbum } from '../Context';
 
-const Search = (props) => {
+const Search = () => {
 
-    const InputSearch = useCallback((e) => {
-        props.setSearchPhotos(e.target.value);
-        props.setCurrentPage(1);
-    }, [props]);
+    const { InputSearch } = useAlbum()
 
     return (
 
         <Col sm={4}>
-            <Form.Control type="text" onChange={InputSearch} placeholder="Buscar..." />
+            <Form.Control title="Busca" type="text" onChange={InputSearch} placeholder="Buscar..." />
         </Col>
     )
 }
