@@ -29,7 +29,7 @@ O objetivo do teste é avaliar a capacidade de resolver problemas e também a qu
 - Campo para pré selecionar a quantidade de fotos por pagina;
 - Campo de busca que carrega fotos conforme a digitação do conteudo buscado por usuário;
 - Fotos são ampliadas com cursor do mouse;
-- Paginação renderizada conforme quantidade de fotos e estabelecido uma quantidade total de paginas;
+- Paginação renderizada conforme quantidade de fotos da busca e estabelecido uma quantidade total de paginas para fotos de tendências;
 - Quando a pagina é selecionada o site volta ao topo da pagina para redenrização das fotos;
 - Compartilhamento de dados do site entre componentes com Context 
 

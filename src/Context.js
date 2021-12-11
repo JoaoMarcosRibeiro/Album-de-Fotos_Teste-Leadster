@@ -23,7 +23,7 @@ export const AlbumContextProvider = (props) => {
           .then((response) => setPhotos(response.photos))
           .catch(error => console.log(error));
 
-        const totalPages = 10;
+        const totalPages = 100;
 
         const arrayPages = [];
         for (let i = 1; i <= totalPages; i++) {
@@ -50,25 +50,13 @@ export const AlbumContextProvider = (props) => {
 
         const totalPages = Math.ceil(total / limit);
 
-        const totalPageMax = 10;
-
         const arrayPages = [];
 
-        if (totalPages <= totalPageMax) {
-
-          for (let i = 1; i <= totalPages; i++) {
-            arrayPages.push(i);
-          }
-
-          setPages(arrayPages);
-
-        } else {
-          for (let i = 1; i <= totalPageMax; i++) {
-            arrayPages.push(i);
-          }
-
-          setPages(arrayPages);
+        for (let i = 1; i <= totalPages; i++) {
+          arrayPages.push(i);
         }
+
+        setPages(arrayPages);        
       }
 
       searchPhotos();
