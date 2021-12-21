@@ -12,10 +12,10 @@ const Photos = () => {
 
   return (
 
-    <Row>
+    <Row className='photos'>
       {photos.map((foto) => (
         <Col className="mt-5 mb-5" key={foto.id} sm={4}>
-          <Image src={foto.src.tiny} alt="" />
+          <a href={foto.src.original} target="_blank" rel="noopener noreferrer"><Image src={foto.src.tiny} alt="" /></a>
         </Col>
       ))}
     </Row>

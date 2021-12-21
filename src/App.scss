@@ -37,16 +37,20 @@ $font-app: 'Cinzel', serif;
   .form-control {
     margin-top: 15px;
     font-family: $font-app;
-  }  
+  }    
   
-  img {
-    transform: scale(0.9);
-    transition: ease 0.2s;
-    cursor: pointer;
-  }
+  .photos {
+    min-height: 600px;
 
-  img:hover {
-    transform: scale(1.2);
+    img {
+      transform: scale(0.9);
+      transition: ease 0.2s;
+      cursor: pointer;
+    }
+  
+    img:hover {
+      transform: scale(1.2);
+    }
   }
 
   .page-item.active .page-link {

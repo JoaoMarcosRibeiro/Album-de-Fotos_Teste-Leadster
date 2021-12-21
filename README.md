@@ -31,7 +31,8 @@ O objetivo do teste é avaliar a capacidade de resolver problemas e também a qu
 - Fotos são ampliadas com cursor do mouse;
 - Paginação renderizada conforme quantidade de fotos da busca e estabelecido uma quantidade total de paginas para fotos de tendências;
 - Quando a pagina é selecionada o site volta ao topo da pagina para redenrização das fotos;
-- Compartilhamento de dados do site entre componentes com Context 
+- Compartilhamento de dados do site entre componentes com Context
+- Quando clicar em uma foto, link vai abrir nova aba do navegador com imagem original.
 
 Tecnologias utilizadas:
 
