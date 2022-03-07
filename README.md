@@ -42,3 +42,6 @@ Tecnologias utilizadas:
 - [Bootstrap](https://getbootstrap.com/)
 - [React-bootstrap](https://react-bootstrap.github.io/)
 - [Jquery](https://jquery.com/)
+
+
+Deploy: https://joaomarcosribeiro.github.io/Album-de-Fotos_Teste-Leadster/
